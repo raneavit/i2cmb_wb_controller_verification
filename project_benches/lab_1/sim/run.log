@@ -1,0 +1,154 @@
+QuestaSim qrun 2023.4 Utility 2023.10 Oct  9 2023
+Start time: 14:16:32 on Feb 22,2024
+qrun -64 -gui -visualizer -onfinish stop -classdebug -uvmcontrol=all -msgmode both -permit_unmatched_virtual_intf -l run.log -f lab1_filelist.f -sv_seed 123456 -msglimit error -msglimitcount 20 -do "set IterationLimit 140000; set NoQuitOnFinish 1; coverage attribute -name TESTNAME -value test_top; coverage save -onexit test_top.ucdb; do wave.do" -debug,livesim -qwavedb=+signal+memory=1024+report+parameter+class+assertion+uvm_schematic+msg+classmemory=1024+statictaskfunc -top top -covermultiuserenv -designfile design.bin 
+Creating library 'qrun.out/work'.
+QuestaSim-64 vlog 2023.4 Compiler 2023.10 Oct  9 2023
+Start time: 14:16:32 on Feb 22,2024
+vlog -msglimit error -msglimitcount 20 -covermultiuserenv ../../../verification_ip/interface_packages/wb_pkg/src/wb_if.sv ../testbench/top.sv -work qrun.out/work -statslog qrun.out/stats_log -writesessionid "+qrun.out/top_dus" -csession=incr -csessionid=0 
+-- Compiling interface wb_if
+-- Compiling module top
+
+Top level modules:
+	top
+End time: 14:16:33 on Feb 22,2024, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
+QuestaSim-64 vcom 2023.4 Compiler 2023.10 Oct  9 2023
+Start time: 14:16:33 on Feb 22,2024
+vcom -msglimit error -msglimitcount 20 -covermultiuserenv ../rtl/iicmb_int_pkg.vhd ../rtl/iicmb_pkg.vhd ../rtl/mbyte.vhd ../rtl/mbit.vhd ../rtl/bus_state.vhd ../rtl/filter.vhd ../rtl/conditioner.vhd ../rtl/conditioner_mux.vhd ../rtl/iicmb_m.vhd ../rtl/regblock.vhd ../rtl/wishbone.vhd ../rtl/iicmb_m_wb.vhd -work qrun.out/work -autoorder -statslog qrun.out/stats_log -writesessionid "+qrun.out/top_dus" -csession=incr -csessionid=1 
+-- Loading package STANDARD
+-- Scanning package iicmb_int_pkg
+-- Scanning package body iicmb_int_pkg
+-- Loading package iicmb_int_pkg
+-- Scanning package iicmb_pkg
+-- Scanning package body iicmb_pkg
+-- Loading package iicmb_pkg
+-- Scanning entity mbyte
+-- Scanning architecture rtl of mbyte
+-- Scanning entity mbit
+-- Scanning architecture rtl of mbit
+-- Scanning entity bus_state
+-- Scanning architecture rtl of bus_state
+-- Scanning entity filter
+-- Scanning architecture rtl of filter
+-- Scanning entity conditioner
+-- Scanning architecture str of conditioner
+-- Scanning entity conditioner_mux
+-- Scanning architecture str of conditioner_mux
+-- Scanning entity iicmb_m
+-- Scanning architecture str of iicmb_m
+-- Scanning entity regblock
+-- Scanning architecture rtl of regblock
+-- Scanning entity wishbone
+-- Scanning architecture rtl of wishbone
+-- Scanning entity iicmb_m_wb
+-- Scanning architecture str of iicmb_m_wb
+End time: 14:16:34 on Feb 22,2024, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
+QuestaSim-64 vcom 2023.4 Compiler 2023.10 Oct  9 2023
+Start time: 14:16:34 on Feb 22,2024
+vcom -refresh_marked -work qrun.out/work -csession=incr -statslog qrun.out/stats_log 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity bus_state
+-- Compiling architecture rtl of bus_state
+-- Compiling entity conditioner
+-- Compiling architecture str of conditioner
+-- Compiling entity conditioner_mux
+-- Compiling architecture str of conditioner_mux
+-- Compiling entity filter
+-- Compiling architecture rtl of filter
+-- Compiling package iicmb_int_pkg
+-- Compiling package body iicmb_int_pkg
+-- Loading package iicmb_int_pkg
+-- Loading package NUMERIC_STD
+-- Loading package iicmb_pkg
+-- Loading package iicmb_int_pkg
+-- Compiling entity iicmb_m
+-- Compiling architecture str of iicmb_m
+-- Compiling entity iicmb_m_wb
+-- Compiling architecture str of iicmb_m_wb
+-- Compiling package iicmb_pkg
+-- Compiling package body iicmb_pkg
+-- Loading package iicmb_pkg
+-- Compiling entity mbit
+-- Compiling architecture rtl of mbit
+-- Loading package iicmb_pkg
+-- Compiling entity mbyte
+-- Compiling architecture rtl of mbyte
+-- Compiling entity regblock
+-- Compiling architecture rtl of regblock
+-- Compiling entity wishbone
+-- Compiling architecture rtl of wishbone
+End time: 14:16:35 on Feb 22,2024, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
+QuestaSim-64 vopt 2023.4 Compiler 2023.10 Oct  9 2023
+Start time: 14:16:35 on Feb 22,2024
+vopt -msglimit error -msglimitcount 20 -debug,livesim -designfile design.bin top -work qrun.out/work -statslog qrun.out/stats_log -o qrun_opt -csession=incr -csessionid=2 
+
+Top level modules:
+	top
+
+Analyzing design...
+-- Loading module top
+-- Loading interface wb_if
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading entity iicmb_m_wb
+-- Loading architecture str of iicmb_m_wb
+-- Loading entity wishbone
+-- Loading package NUMERIC_STD
+-- Loading package iicmb_pkg
+-- Loading entity regblock
+-- Loading package iicmb_int_pkg
+-- Loading entity iicmb_m
+-- Loading architecture rtl of wishbone
+-- Loading architecture rtl of regblock
+-- Loading package body iicmb_pkg
+-- Loading architecture str of iicmb_m
+-- Loading entity mbyte
+-- Loading entity mbit
+-- Loading entity conditioner_mux
+-- Loading package body iicmb_int_pkg
+-- Loading architecture rtl of mbyte
+-- Loading architecture rtl of mbit
+-- Loading architecture str of conditioner_mux
+-- Loading entity conditioner
+-- Loading architecture str of conditioner
+-- Loading entity filter
+-- Loading entity bus_state
+-- Loading architecture rtl of filter
+-- Loading architecture rtl of bus_state
+Optimizing 17 design-units (inlining 1/2 module instances, 23/31 architecture instances):
+-- Inlining interface wb_if(fast__1)
+-- Optimizing module top(fast)
+-- Optimizing interface wb_if(fast)
+-- Inlining architecture rtl of mbyte
+-- Inlining architecture rtl of mbit
+-- Inlining architecture str of conditioner_mux
+-- Optimizing architecture str of iicmb_m
+-- Inlining architecture rtl of wishbone
+-- Inlining architecture rtl of regblock
+-- Optimizing architecture str of iicmb_m_wb
+-- Inlining architecture rtl of filter
+-- Inlining architecture rtl of bus_state
+-- Optimizing architecture str of conditioner
+-- Optimizing package iicmb_pkg
+-- Optimizing package body iicmb_pkg
+-- Optimizing package iicmb_int_pkg
+-- Optimizing package body iicmb_int_pkg
+viscom:
+VISCOM: Start time: 14:16:37 on Feb 22,2024
+
+VISCOM: QuestaSim /mnt/apps/public/COE/mg_apps/questa2023.4/questasim/linux/../linux_x86_64/VisualizerRls/bin/viscom 2023.4 at 2023.10 Oct  9 2023
+VISCOM: Writing design.bin
+VISCOM: Done writing design.bin
+VISCOM: End time: 14:16:38 on Feb 22,2024, Elapsed time: 0:00:01 (Process Size : 279MB, Peak Process Size : 281MB)
+
+
+Optimized design name is qrun_opt
+End time: 14:16:38 on Feb 22,2024, Elapsed time: 0:00:03
+Errors: 0, Warnings: 0
+# VISUALIZERROOT = '/mnt/apps/public/COE/mg_apps/questa2023.4/questasim/linux_x86_64/VisualizerRls'
+# USER = 'arrane'

@@ -1,0 +1,4 @@
+make cli GEN_TYPE=i2cmb_generator
+make run_cli GEN_TYPE=i2cmb_generator_register_test TEST_SEED=random
+make run_cli GEN_TYPE=i2cmb_generator_dut_behaviour_test TEST_SEED=random
+make run_cli GEN_TYPE=i2cmb_generator_random TEST_SEED=random

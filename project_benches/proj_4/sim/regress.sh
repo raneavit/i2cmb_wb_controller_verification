@@ -1,0 +1,3 @@
+make testlist
+make merge_coverage
+make view_coverage
